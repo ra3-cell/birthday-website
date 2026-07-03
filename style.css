@@ -1,0 +1,491 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.music-btn{
+
+    margin-top:20px;
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#b48ea0;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.music-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#9c7f8e;
+}
+:root{
+    --text:#2d3748;
+    --primary:#6b7280;
+    --glass:rgba(255,255,255,0.45);
+    --shadow:0 10px 35px rgba(0,0,0,0.08);
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff9fb 0%,
+    #fff5f7 25%,
+    #f8f4ff 50%,
+    #eef7ff 75%,
+    #fffdf7 100%
+    );
+
+    background-size:400% 400%;
+
+    animation:
+    gradientMove 18s ease infinite;
+
+    position:relative;
+}
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* =========================
+   PETALS
+========================= */
+
+#petals-container{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.petal{
+
+    position:absolute;
+
+    width:16px;
+    height:24px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffd4e5,
+    #f7b8cf
+    );
+
+    border-radius:
+    70% 0 70% 0;
+
+    opacity:.85;
+
+    animation-name:fall;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes fall{
+
+    0%{
+        transform:
+        translateY(-10vh)
+        translateX(0)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:.9;
+    }
+
+    50%{
+        transform:
+        translateY(50vh)
+        translateX(40px)
+        rotate(180deg);
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        translateX(120px)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page{
+
+    position:absolute;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    z-index:2;
+}
+
+.page.active{
+
+    display:flex;
+
+    animation:pageFade .8s ease;
+}
+
+@keyframes pageFade{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass{
+
+    width:90%;
+    max-width:900px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+}
+
+.final-card{
+    transform:scale(1.03);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:5rem;
+    font-weight:600;
+
+    margin-bottom:15px;
+
+    color:#374151;
+}
+
+h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:3rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+    color:#374151;
+}
+
+p{
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+    color:#4b5563;
+}
+
+.quote{
+
+    font-family:
+    'Great Vibes',
+    cursive;
+
+    font-size:2.6rem;
+
+    margin-bottom:25px;
+
+    color:#5b6472;
+}
+
+.symbol{
+
+    font-size:2rem;
+
+    color:#9c7f8e;
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.nav-controls{
+
+    position:fixed;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:15px;
+
+    z-index:999;
+}
+
+.nav-controls button{
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#374151;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:.95rem;
+
+    transition:.3s;
+}
+
+.nav-controls button:hover{
+
+    transform:translateY(-3px);
+
+    background:#1f2937;
+}
+
+/* =========================
+   MESSAGE CARDS
+========================= */
+
+.message-card{
+
+    background:
+    rgba(255,255,255,.55);
+
+    margin:15px 0;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.04);
+}
+
+.message-card:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+}
+
+/* =========================
+   QUALITY GRID
+========================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.quality{
+
+    background:
+    rgba(255,255,255,.55);
+
+    padding:18px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.04);
+
+    font-weight:500;
+}
+
+/* =========================
+   LIST
+========================= */
+
+ul{
+
+    max-width:550px;
+
+    margin:auto;
+
+    text-align:left;
+}
+
+li{
+
+    margin:15px 0;
+
+    line-height:1.8;
+
+    color:#4b5563;
+}
+
+/* =========================
+   SPARKLE EFFECT
+========================= */
+
+.sparkle{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    color:#b48ea0;
+
+    font-size:18px;
+
+    animation:sparkleAnim 1.2s ease forwards;
+}
+
+@keyframes sparkleAnim{
+
+    from{
+
+        opacity:1;
+
+        transform:
+        scale(.5)
+        rotate(0deg);
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+        scale(2)
+        rotate(180deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .glass{
+        padding:30px;
+    }
+
+    h1{
+        font-size:3.2rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .quote{
+        font-size:2rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .nav-controls{
+        bottom:15px;
+    }
+
+    .nav-controls button{
+        padding:10px 18px;
+        font-size:.85rem;
+    }
+}

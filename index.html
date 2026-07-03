@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Special Birthday</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cherry Blossom Background -->
+    <div id="petals-container"></div>
+    
+    <!-- Navigation -->
+    <div class="nav-controls">
+        <button id="prevBtn" onclick="previousPage()">← Previous</button>
+        <button id="nextBtn" onclick="nextPage()">Next →</button>
+    </div>
+
+    <!-- Page 1 -->
+    <section class="page active" id="page1">
+        <div class="glass">
+            <div class="symbol">⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚</div>
+            <h1>Happy Birthday</h1>
+            <p id="typing"></p>
+        </div>
+    </section>
+<section class="page active" id="page1">
+
+    <div class="glass">
+
+        <div class="symbol">✦</div>
+
+        <h1>Happy Birthday</h1>
+
+        <p id="typing"></p>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            ♪ Play Music
+        </button>
+
+    </div>
+
+</section>
+    <!-- Page 2 -->
+    <section class="page" id="page2">
+        <div class="glass">
+            <div class="symbol">✦•┈๑⋅⋯ ⋯⋅๑┈·✦</div>
+            <h2>Why You're Amazing</h2>
+
+            <div class="message-card">
+                Your kindness leaves a positive mark on everyone you meet.
+            </div>
+
+            <div class="message-card">
+                Your presence makes ordinary moments unforgettable.
+            </div>
+
+            <div class="message-card">
+                You inspire people simply by being yourself.
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section class="page" id="page3">
+        <div class="glass">
+            <div class="symbol">── ⋆⋅☆⋅⋆ ──</div>
+
+            <h2>Your Kindness</h2>
+
+            <p>
+                The way you support people,
+                encourage them and make them feel valued
+                is one of the many things that makes you special.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section class="page" id="page4">
+        <div class="glass">
+            <div class="symbol">──── ୨୧ ────</div>
+
+            <h2>Your Strength</h2>
+
+            <p>
+                Every challenge you face becomes another reason
+                to admire your determination, courage,
+                and ability to keep moving forward.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 5 -->
+    <section class="page" id="page5">
+        <div class="glass">
+            <div class="symbol">── ⋆⋅𖤓⋅⋆ ──</div>
+
+            <h2>Your Journey</h2>
+
+            <p>
+                Every year tells a story.
+                Every challenge builds strength.
+                Every success becomes a memory.
+
+                Your journey continues to inspire those around you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 6 -->
+    <section class="page" id="page6">
+        <div class="glass">
+            <div class="symbol">・┆✦ʚ♡ɞ✦ ┆・</div>
+
+            <h2>Birthday Wishes</h2>
+
+            <ul>
+                <li>May your dreams become reality.</li>
+                <li>May happiness always stay beside you.</li>
+                <li>May success follow your hard work.</li>
+                <li>May every day bring a new reason to smile.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Page 7 -->
+    <section class="page" id="page7">
+        <div class="glass">
+            <div class="symbol">⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</div>
+
+            <h2>Things That Make You Special</h2>
+
+            <div class="grid">
+
+                <div class="quality">Positivity</div>
+                <div class="quality">Confidence</div>
+                <div class="quality">Kindness</div>
+                <div class="quality">Beautiful Energy</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 8 -->
+    <section class="page" id="page8">
+        <div class="glass">
+            <div class="symbol">⋆ ˚｡⋆୨୧˚</div>
+
+            <h2>A Little Secret</h2>
+
+            <p>
+                One of your greatest qualities is how effortlessly
+                you make people feel appreciated and understood.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 9 -->
+    <section class="page" id="page9">
+        <div class="glass">
+            <div class="symbol">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
+
+            <h2>The Future Awaits</h2>
+
+            <p>
+                New opportunities.
+                New adventures.
+                New memories.
+
+                The best chapters of your story
+                are still waiting to be written.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 10 -->
+    <section class="page" id="page10">
+        <div class="glass">
+            <div class="symbol">₊˚⊹ᰔ</div>
+
+            <h2>A Special Letter</h2>
+
+            <p>
+                Thank you for being such an incredible person.
+
+                Your kindness, positivity and beautiful spirit
+                inspire everyone around you.
+
+                Keep believing in yourself,
+                because you are capable of amazing things.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 11 -->
+    <section class="page" id="page11">
+        <div class="glass">
+            <div class="symbol">⋆౨ৎ˚⟡˖ ࣪</div>
+
+            <h2>A Reflection</h2>
+
+            <p>
+                Today is not only about celebrating a birthday.
+
+                It is about celebrating your journey,
+                your growth,
+                your achievements,
+                and the wonderful person you have become.
+            </p>
+        </div>
+    </section>
+
+    <!-- Page 12 -->
+    <section class="page" id="page12">
+        <div class="glass final-card">
+
+            <div class="quote">
+                "The best chapters of your story are still ahead."
+            </div>
+
+            <div class="symbol">*ੈ✩‧₊˚</div>
+
+            <h1>Happy Birthday</h1>
+
+            <p>
+                May this year bring endless happiness,
+                beautiful memories,
+                exciting adventures,
+                meaningful friendships,
+                and every success you deserve.
+
+                Wishing you a truly wonderful year ahead.
+            </p>
+
+        </div>
+    </section>
+    <audio id="bgMusic" loop>
+    <source src="you-color-my-blood.mp3" type="audio/mpeg">
+</audio>
+    <script src="script.js"></script>
+
+</body>
+</html>
