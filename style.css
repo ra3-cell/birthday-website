@@ -493,73 +493,63 @@ li{
    MEMORY PAGE - SCROLLABLE SINGLE COLUMN
 ========================================== */
 
+/* ==========================================
+   MEMORY PAGE - SCROLLABLE SINGLE COLUMN
+========================================== */
+
 .memory-page{
-
     overflow-y:auto !important;
-
     align-items:flex-start !important;
-
     justify-content:flex-start !important;
-
-    padding-top:40px;
-
-    padding-bottom:150px;
+    padding-top:50px;
+    padding-bottom:200px;
 }
 
 .memory-page.active{
-
     display:block !important;
 }
 
 .memory-glass{
-
     width:95% !important;
-
     max-width:1200px !important;
-
     margin:40px auto;
 }
 
-/* SCROLL BAR */
+/* SCROLLBAR */
 
 .memory-page::-webkit-scrollbar{
-
     width:8px;
 }
 
 .memory-page::-webkit-scrollbar-thumb{
-
     background:#c9a9b8;
-
     border-radius:20px;
 }
 
-/* SINGLE COLUMN */
+/* SINGLE COLUMN LAYOUT */
 
 .memory-grid{
-
     display:flex !important;
-
     flex-direction:column !important;
-
     align-items:center !important;
 
-    gap:35px;
+    gap:120px !important;      /* BIG GAP BETWEEN IMAGES */
 
     width:100%;
+    margin-top:70px;
+    padding-bottom:100px;
 }
 
-/* PHOTO CARD */
+/* IMAGE CARD */
 
 .memory-card{
 
     position:relative;
 
     width:55%;
-
     max-width:500px;
 
-    min-height:550px;
+    height:650px;
 
     overflow:hidden;
 
@@ -567,20 +557,33 @@ li{
 
     cursor:pointer;
 
-    background:white;
+    background:linear-gradient(
+        135deg,
+        rgba(255,245,248,.95),
+        rgba(248,242,255,.95),
+        rgba(245,249,255,.95)
+    );
+
+    border:1px solid rgba(255,255,255,.5);
+
+    backdrop-filter:blur(15px);
 
     margin:0 auto;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.10);
+    box-shadow:
+        0 15px 40px rgba(180,142,160,.18),
+        0 5px 15px rgba(0,0,0,.05);
 
     transition:.4s ease;
 }
 
+.memory-card:hover{
+    transform:translateY(-8px);
+}
+
 .memory-card img{
-
     width:100%;
-
-    height:550px;
+    height:650px;
 
     object-fit:cover;
 
@@ -591,60 +594,36 @@ li{
     transition:1s ease;
 }
 
-.memory-card:hover{
-
-    transform:translateY(-6px);
-}
-
-
-
-/* IMAGE */
-
-
-
-/* REVEALED IMAGE */
-
 .memory-card.revealed img{
-
     filter:blur(0);
-
     transform:scale(1);
 }
 
 /* COVER */
 
 .cover{
-
     position:absolute;
-
     inset:0;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    background:
-    rgba(255,255,255,.60);
+    background:rgba(255,255,255,.60);
 
     backdrop-filter:blur(14px);
 
     color:#444;
 
     font-size:1.3rem;
-
     font-weight:500;
-
     letter-spacing:2px;
 
     transition:.8s ease;
 }
 
 .memory-card.revealed .cover{
-
     opacity:0;
-
     visibility:hidden;
 }
 
@@ -652,25 +631,21 @@ li{
 
 @media(max-width:768px){
 
-    .memory-card{
-
-        width:90%;
-
-        max-width:400px;
-
-        min-height:500px;
+    .memory-grid{
+        gap:80px !important;
     }
 
-    .memory-card img{
-
+    .memory-card{
+        width:90%;
+        max-width:400px;
         height:500px;
     }
 
-
-
+    .memory-card img{
+        height:500px;
+    }
 
     .cover{
-
         font-size:1rem;
     }
 }
