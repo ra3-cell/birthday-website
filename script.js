@@ -4,7 +4,7 @@ id="w42xmh"
 ========================= */
 
 let currentPage = 1;
-const totalPages = 12;
+const totalPages = 13;
 
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
@@ -39,6 +39,19 @@ function toggleMusic(){
         isPlaying = false;
     }
 }
+document
+.querySelectorAll(".memory-card")
+.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        card.classList.add("revealed");
+
+        sparkleEffect();
+
+    });
+
+});
 function showPage(pageNumber){
 
     document
